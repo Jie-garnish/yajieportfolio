@@ -1,0 +1,10 @@
+import Link from "next/link";
+import "./commerce-case.css";
+import type { ReactNode } from "react";
+
+export function CaseShell({slug,title,lead,duration,children}:{slug:string,title:string,lead:string,duration:string,children:ReactNode}){
+ return <main className={`commerce-case ${slug}-case`}><nav className="case-nav"><Link className="wordmark" href="/">yajie.hé</Link><Link href="/#work">← Back to selected work</Link></nav><header className="commerce-hero"><div className="commerce-inner"><span className="commerce-label">{slug==='aqui'?'Mobile commerce · 2021':'Furniture commerce · Responsive web'}</span><h1>{title}</h1><p>{lead}</p><img className="commerce-cover" src={`/portfolio/${slug}-clean.png`} alt={`${title} interface mockup`}/><div className="commerce-facts"><div><span>My role</span><b>UX Designer</b></div><div><span>Duration</span><b>{duration}</b></div><div><span>Focus</span><b>Research · Interaction · Prototyping</b></div></div></div></header>{children}<footer className="case-next"><span>Continue exploring</span><Link href={slug==='aqui'?'/work/maynooth':'/work/aqui'}>{slug==='aqui'?'Maynooth Furniture':'Aqui Beirut'} ↗</Link></footer></main>
+}
+export function Chapter({number,title,tone='',children}:{number:string,title:string,tone?:string,children:ReactNode}){return <section className={`commerce-chapter ${tone}`}><div className="commerce-inner"><div className="commerce-heading"><span className="commerce-label">{number}</span><h2>{title}</h2></div>{children}</div></section>}
+export function Gallery({slug,items,phones=false}:{slug:string,items:[number,string,string?][],phones?:boolean}){return <div className={`commerce-gallery ${phones?'phones':''}`}>{items.map(([id,caption,ext='png'])=><figure key={`${id}-${caption}`}><a href={`/portfolio/${slug}/${id}.${ext}`} target="_blank" rel="noreferrer"><img loading="lazy" src={`/portfolio/${slug}/${id}.${ext}`} alt={caption}/></a><figcaption>{caption}</figcaption></figure>)}</div>}
+export function Columns({items}:{items:[string,string][]}){return <div className="commerce-columns">{items.map(([title,body])=><article key={title}><h3>{title}</h3><p>{body}</p></article>)}</div>}

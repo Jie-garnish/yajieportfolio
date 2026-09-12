@@ -1,0 +1,7 @@
+.florida-tile .tile-image img,.earlier-image img{box-shadow:none;transform:none;filter:none}
+.florida-tile:hover .tile-image img{transform:none}
+.florida-tile .tile-image{background:#dbead5}
+.coral-bg{background:#feceb9}
+.blue-bg{background:#c4d6fd}
+.commerce-case.aqui-case{--case-accent:#feceb9}
+.commerce-case.maynooth-case{--case-accent:#c4d6fd}

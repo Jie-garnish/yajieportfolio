@@ -1,0 +1,99 @@
+/* Add visual adjustments here. This file is loaded after site.css. */
+
+/* About section: circular portrait with no location label. */
+.about-portrait {
+  align-self: start;
+  width: 100%;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+.about-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+/* Fleet Admin: leave space below the overlapping light-blue hero panel. */
+.vd-hero + .vd-problem {
+  padding-top: 230px;
+}
+
+/* Show the entire dashboard, including its right-hand controls. */
+.macbook-screen img,
+.prototype-macbook .macbook-screen img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.macbook-screen {
+  background: #ffffff;
+}
+
+/* The small heading must not inherit the large quote's tight tracking. */
+.vd-problem blockquote > span {
+  letter-spacing: 0.02em;
+  word-spacing: 0.08em;
+  line-height: 1.4;
+}
+
+/* Cover only the stray text in the sketch's blank top-left corner.
+   Coordinates are proportional to the original 1982 × 822 image.
+   The source image and all diagram labels remain unchanged. */
+.concept-clean-frame {
+  display: flex;
+  align-items: center;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  margin-bottom: 22px;
+  background: #f6f8f9;
+}
+
+.concept-clean-image {
+  position: relative;
+  width: 100%;
+}
+
+.concept-card .concept-clean-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  margin: 0;
+}
+
+.concept-clean-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24%;
+  height: 9%;
+  background: #ffffff;
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  .vd-hero + .vd-problem {
+    padding-top: 150px;
+  }
+
+  .concept-clean-frame {
+    aspect-ratio: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

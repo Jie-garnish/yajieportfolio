@@ -1,0 +1,17 @@
+.frm-page .frm-process{background:var(--frm-pale);color:#101011}
+.frm-page .frm-final{background:#f4f1eb;color:#101011}
+.frm-page .frm-system{background:var(--frm-lime);color:#101011}
+.frm-page .frm-cover{background:#fff;padding:0;max-height:640px;overflow:auto;border:1px solid #e5e5e5}
+.frm-page .frm-cover img{width:100%;transform:none;box-shadow:none}
+.frm-page .frm-priority-board{margin:64px 0 80px;background:#fff}
+.frm-priority-board img{width:100%;height:auto;border:1px solid #e5e5e5}
+.frm-priority-board figcaption{font-size:13px;color:#626262;margin-top:16px;line-height:1.5}
+.frm-wire-title{font-size:32px;letter-spacing:-.035em;margin:0 0 32px}
+.frm-page .frm-wire-grid{grid-template-columns:1fr 1fr;align-items:start;margin-top:0;gap:48px 28px}
+.frm-page .frm-wire-grid figure{background:#fff;padding:0;display:block}
+.frm-page .frm-wire-grid img{height:auto;width:100%;box-shadow:none;border:1px solid #e5e5e5}
+.frm-page .frm-wire-grid figcaption,.frm-page .frm-compare-images figcaption{font-size:12px;line-height:1.5;color:#555}
+.frm-page .frm-compare-images figure>div{background:#fff;padding:0;border:1px solid #e5e5e5}
+.frm-page .frm-compare-images img{box-shadow:none}
+.frm-page .frm-system-grid figure{background:#fff;border:1px solid #e5e5e5}
+@media(max-width:650px){.frm-page .frm-wire-grid{grid-template-columns:1fr}.frm-page .frm-cover{max-height:380px}}
