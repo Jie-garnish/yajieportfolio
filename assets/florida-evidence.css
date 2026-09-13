@@ -1,0 +1,56 @@
+/* Research and feature coverage; original section backgrounds are retained. */
+.frm-page .fr-evidence,.frm-page .fr-priorities{margin:64px 0}
+.frm-page .fr-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin:32px 0}
+.frm-page .fr-grid article{border-top:1px solid currentColor;padding-top:24px;min-width:0}
+.frm-page .fr-grid article>span{display:block;font:12px/1.5 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+.frm-page .fr-grid h3,.frm-page .fr-priorities>h3,.frm-page .fr-coverage>h3{font-size:clamp(24px,2.6vw,34px);line-height:1.2;letter-spacing:-.02em;margin:0 0 18px}
+.frm-page .fr-grid p,.frm-page .fr-priorities>p{font:18px/1.7 Georgia,serif;margin:12px 0}
+.frm-page .fr-source{border-top:1px solid #acb4ad;padding-top:20px;margin:32px 0}
+.frm-page .fr-source summary{cursor:pointer;font-size:18px;padding:10px 0}
+.frm-page .fr-source figure{margin:28px 0}
+.frm-page .fr-source img{display:block;width:100%;height:auto}
+.frm-page .fr-source figcaption{font:13px/1.6 Arial,sans-serif;margin-top:12px}
+.frm-page .fr-coverage{max-width:1320px;margin:48px auto 72px}
+.frm-page .fr-table-wrap{overflow-x:auto}
+.frm-page .fr-coverage table{width:100%;border-collapse:collapse;font-size:16px;line-height:1.6}
+.frm-page .fr-coverage th,.frm-page .fr-coverage td{text-align:left;vertical-align:top;padding:20px 18px;border-bottom:1px solid #b9c4b8}
+.frm-page .fr-coverage th:first-child{width:24%}
+.frm-page .fr-accessibility{padding:90px clamp(22px,5vw,80px);background:#dbead5;color:#17291e}
+.frm-page .fr-inner{max-width:1320px;margin:auto}
+@media(max-width:800px){.frm-page .fr-grid{grid-template-columns:1fr}.frm-page .fr-accessibility{padding:64px 22px}.frm-page .fr-coverage table{min-width:580px}.frm-page .fr-evidence,.frm-page .fr-priorities{margin:40px 0}}
+
+/* Align all five Florida project facts, including shipping status. */
+.frm-page .case-facts {grid-template-columns:1fr 1.25fr .75fr 1.6fr .7fr;}
+.frm-page .case-facts > div {min-width:0;padding:26px 18px;border-bottom:0;border-right:1px solid #393936;}
+.frm-page .case-facts > div:last-child {border-right:0;}
+.frm-page .case-facts span {margin-bottom:14px;line-height:1.5;}
+.frm-page .case-facts b {display:block;line-height:1.6;}
+@media(max-width:900px){
+.frm-page .case-facts {grid-template-columns:repeat(2,minmax(0,1fr));}
+.frm-page .case-facts > div:nth-child(2n) {border-right:0;}
+.frm-page .case-facts > div:nth-child(-n+4) {border-bottom:1px solid #393936;}
+.frm-page .case-facts > div:last-child {grid-column:1 / -1;}
+}
+@media(max-width:600px){
+.frm-page .case-facts {grid-template-columns:1fr;}
+.frm-page .case-facts > div {border-right:0;}
+.frm-page .case-facts > div:last-child {border-bottom:0 !important;}
+}
+
+/* Compact ideation gallery; original images remain available at full size. */
+.frm-page .fr-ideation-gallery {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:28px;
+  max-width:1000px;
+  margin:40px auto;
+}
+.frm-page .fr-ideation-gallery .frm-priority-board {margin:0;background:transparent;min-width:0;}
+.frm-page .fr-ideation-gallery a {display:flex;align-items:center;justify-content:center;height:240px;}
+.frm-page .fr-ideation-gallery img {display:block;width:auto;height:auto;max-width:100%;max-height:240px;object-fit:contain;border:0;}
+.frm-page .fr-ideation-gallery figcaption {margin-top:12px;font-size:12px;line-height:1.5;}
+@media(max-width:650px){
+  .frm-page .fr-ideation-gallery {grid-template-columns:1fr;max-width:420px;gap:24px;}
+  .frm-page .fr-ideation-gallery a {height:200px;}
+  .frm-page .fr-ideation-gallery img {max-height:200px;}
+}
